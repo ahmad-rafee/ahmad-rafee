@@ -1,0 +1,24 @@
+name: Sync to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout profile repo
+        uses: actions/checkout@v4
+
+      - name: Push to ahmad-rafee.github.io
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.GH_PAGES_TOKEN }}
+        with:
+          source-directory: .
+          destination-github-username: ahmad-rafee
+          destination-repository-name: ahmad-rafee.github.io
+          target-branch: main
+          commit-message: sync from profile repo
