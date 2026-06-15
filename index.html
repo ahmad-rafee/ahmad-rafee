@@ -73,6 +73,17 @@
       border-radius: 6px;
     }
 
+    /* Badge images — flow horizontally, not stacked */
+    #content p img {
+      display: inline;
+      max-width: none;
+      margin: 2px 3px 2px 0;
+      vertical-align: middle;
+    }
+    #content p:has(img) {
+      line-height: 2;
+    }
+
     /* Center-aligned divs from the README */
     #content div[align="center"] {
       text-align: center;
