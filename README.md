@@ -166,6 +166,12 @@ As an **ops lead** I define SLOs, own the runbooks, set up monitoring, and make 
 
 ---
 
+## Contribution Activity
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=ahmad-rafee&theme=github-compact&hide_border=true&area=true&area_color=3498DB&color=7F8C8D&line=3498DB&point=2ECC71" width="100%" alt="contribution graph" />
+
+---
+
 ## How I think about a project
 
 ```mermaid
@@ -188,5 +194,15 @@ flowchart LR
 ---
 
 <div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ahmad-rafee/ahmad-rafee/output/github-contribution-grid-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ahmad-rafee/ahmad-rafee/output/github-contribution-grid-snake.svg" />
+  <img alt="contribution snake" src="https://raw.githubusercontent.com/ahmad-rafee/ahmad-rafee/output/github-contribution-grid-snake-dark.svg" width="100%" />
+</picture>
+
+<br/>
+
 <sub>Bern, Switzerland &nbsp;·&nbsp; Authorized to work in Switzerland &nbsp;·&nbsp; Open to senior and lead roles</sub>
+
 </div>
