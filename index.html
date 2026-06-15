@@ -11,6 +11,8 @@
   <!-- Highlight.js for code blocks -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <!-- Mermaid.js for diagrams -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -267,9 +269,9 @@
         .replace(/<h3>(.*?)<\/h3>/gi, '### $1\n')
         .replace(/<\/?(p|div)[^>]*>/gi, '\n');
 
-      // Render mermaid blocks as styled code blocks (no mermaid runtime needed)
+      // Render mermaid blocks as proper diagrams
       md = md.replace(/```mermaid([\s\S]*?)```/g, (_, code) => {
-        return `<div class="mermaid-block">${code.trim()}</div>`;
+        return `<div class="mermaid">${code.trim()}</div>`;
       });
 
       const html = marked.parse(md);
@@ -279,6 +281,8 @@
       content.style.display = 'block';
 
       hljs.highlightAll();
+      mermaid.initialize({ startOnLoad: false, theme: 'dark' });
+      mermaid.run();
     } catch (err) {
       document.getElementById('status').innerHTML =
         `<p>Could not load profile — <a href="https://github.com/ahmad-rafee/ahmad-rafee">view on GitHub</a></p>`;

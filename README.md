@@ -176,19 +176,12 @@ As an **ops lead** I define SLOs, own the runbooks, set up monitoring, and make 
 
 ```mermaid
 flowchart LR
-    A([Problem]) --> B[Design &\nArchitecture]
-    B --> C[Engineering\nStandards]
-    C --> D[Build &\nReview]
-    D --> E[CI/CD &\nDeploy]
-    E --> F[Monitor &\nOperate]
+    A([Problem]) --> B[Design]
+    B --> C[Standards]
+    C --> D[Build]
+    D --> E[Deploy]
+    E --> F[Observe]
     F -->|iterate| B
-
-    style A fill:#2C3E50,stroke:#3498DB,color:#ECF0F1
-    style B fill:#1a2332,stroke:#3498DB,color:#ECF0F1
-    style C fill:#1a2332,stroke:#3498DB,color:#ECF0F1
-    style D fill:#1a2332,stroke:#2ECC71,color:#ECF0F1
-    style E fill:#1a2332,stroke:#2ECC71,color:#ECF0F1
-    style F fill:#1a2332,stroke:#2ECC71,color:#ECF0F1
 ```
 
 ---
